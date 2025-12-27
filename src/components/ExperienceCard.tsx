@@ -1,0 +1,27 @@
+import React from "react";
+import { Experience } from "../types/types";
+
+export interface ExperienceCardProps {
+  experience: Experience;
+}
+
+export function ExperienceCard({ experience }: ExperienceCardProps) {
+  return (
+    <section className="card experience-card" id="experience" aria-labelledby="exp-heading">
+      <div className="exp-card__header">
+        <div className="exp-card__logo" aria-hidden="true">
+          {experience.logoLabel}
+        </div>
+        <div className="exp-card__info">
+          <h3 id="exp-heading" className="exp-card__role">
+            {experience.role}
+          </h3>
+          <p className="exp-card__meta">
+            {experience.company} • {experience.period}
+          </p>
+        </div>
+      </div>
+      <p className="exp-card__description">{experience.summary}</p>
+    </section>
+  );
+}
