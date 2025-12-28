@@ -8,7 +8,7 @@ export interface ContactCardProps {
 
 export function ContactCard({ contacts }: ContactCardProps) {
   const [resumeOpen, setResumeOpen] = useState<boolean>(false);
-  const resumeSrc = contacts.find((c) => c.type === "resume")?.href ?? "/resume.pdf";
+  const resumeSrc = contacts.find((c) => c.type === "resume")?.href ?? "/portfolio/resume.pdf";
 
   return (
     <section className="card contact-card" id="contact" aria-labelledby="contact-heading">

@@ -145,7 +145,8 @@ export function useContent() {
       try {
         setLoading(true);
         setError(null);
-        const res = await fetch("/content.json", { headers: { "Accept": "application/json" } });
+        const baseUrl = (import.meta as any).env.BASE_URL;
+        const res = await fetch(`${baseUrl}content.json`, { headers: { "Accept": "application/json" } });
         if (!res.ok) throw new Error(`Failed to load content.json: ${res.status}`);
         const json: unknown = await res.json();
         if (!isSiteContent(json)) {

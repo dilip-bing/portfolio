@@ -83,7 +83,7 @@
   "contacts": [
     {
       "label": "Resume",
-      "href": "/resume.pdf",
+      "href": "/portfolio/resume.pdf",
       "type": "resume",
       "display": "View & Download"
     },
