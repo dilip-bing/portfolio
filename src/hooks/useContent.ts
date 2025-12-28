@@ -47,7 +47,9 @@ function isProject(value: unknown): value is Project {
     Array.isArray(p.stack) && p.stack.every((t) => typeof t === "string") &&
     typeof p.iconEmoji === "string" &&
     isProjectVariant(p.variant) &&
-    (p.href === undefined || typeof p.href === "string")
+    (p.href === undefined || typeof p.href === "string") &&
+    (p.category === undefined || typeof p.category === "string") &&
+    (p.period === undefined || typeof p.period === "string")
   );
 }
 
