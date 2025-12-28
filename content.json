@@ -8,6 +8,7 @@
   ],
   "hero": {
     "avatarEmoji": "👨‍💻",
+    "avatarImage": "hero.png",
     "titlePrefix": "I'm",
     "name": "Dilip Kumar",
     "titleSuffix": ", an AI engineer.",
@@ -21,17 +22,27 @@
     "lng": -75.912537,
     "zoom": 7
   },
-  "skills": [
-    "Android",
-    "iOS",
-    "React",
-    "Python",
-    "Java",
-    "Kotlin",
-    "Swift",
-    "Docker",
-    "AWS",
-    "TensorFlow"
+  "skillGroups": [
+    {
+      "name": "Mobile Development",
+      "skills": ["Android", "iOS", "Kotlin", "Swift", "Android SDK", "Gradle", "Espresso", "XCTest", "Kaspresso", "Android Emulator"]
+    },
+    {
+      "name": "Frontend",
+      "skills": ["React", "HTML", "CSS", "JavaScript", "TypeScript", "Tailwind CSS", "Vercel"]
+    },
+    {
+      "name": "Backend & Infrastructure",
+      "skills": ["Java", "Python", "PHP", "Docker", "AWS", "Firebase", "MongoDB", "MySQL", "REST APIs", "Shell Script"]
+    },
+    {
+      "name": "Testing & Automation",
+      "skills": ["Appium", "Selenium"]
+    },
+    {
+      "name": "AI/ML & Computer Vision",
+      "skills": ["TensorFlow", "Inception V3", "Computer Vision", "IoT Sensors", "Microcontroller Programming"]
+    }
   ],
   "education": {
     "iconEmoji": "🎓",
@@ -52,7 +63,18 @@
       "stack": ["React", "TypeScript", "Firebase", "Vercel"],
       "iconEmoji": "🏋️",
       "variant": "blue",
-      "category": "AI/ML"
+      "category": "AI/ML",
+      "period": "August 2024 – December 2024"
+    },
+    {
+      "id": "zoho-calendar",
+      "title": "Zoho Calendar",
+      "description": "Automation Lead for calendar application enabling event and meeting creation. Managed quality assurance lifecycle for Android, iOS, and Web platforms to secure zero-defect production releases through rigorous automation and manual testing.",
+      "stack": ["Android", "iOS", "Selenium", "Appium", "Automation"],
+      "iconEmoji": "📅",
+      "variant": "blue",
+      "category": "QA & Testing",
+      "period": "January 2024 – July 2025"
     },
     {
       "id": "earthworm",
@@ -61,7 +83,8 @@
       "stack": ["Python", "TensorFlow", "Computer Vision"],
       "iconEmoji": "🌱",
       "variant": "green",
-      "category": "AI/ML"
+      "category": "AI/ML",
+      "period": "March 2023 – June 2023"
     },
     {
       "id": "test-lab",
@@ -70,7 +93,28 @@
       "stack": ["React", "MongoDB", "Docker", "Android"],
       "iconEmoji": "🧪",
       "variant": "pink",
-      "category": "Infrastructure"
+      "category": "Infrastructure",
+      "period": "January 2024 – July 2025"
+    },
+    {
+      "id": "3d-printer",
+      "title": "3D Printer & Scanner",
+      "description": "Fabricated customized 3D printer and scanner using microcontrollers to scan physical inputs and produce precise 3D models. Secured top ranking in NIT competition for innovative design and technical implementation.",
+      "stack": ["3D CAD Software", "IoT Sensors", "Microcontroller Programming"],
+      "iconEmoji": "🖨️",
+      "variant": "green",
+      "category": "IoT & Hardware",
+      "period": "January 2019 – February 2019"
+    },
+    {
+      "id": "obstacle-robot",
+      "title": "Obstacle Avoiding Robot",
+      "description": "Developed custom algorithm enabling autonomous obstacle avoidance with real-time decision-making capabilities. Secured 1st place in PHYSICA'16 competition.",
+      "stack": ["Raspberry Pi", "C++", "Python", "Sensors"],
+      "iconEmoji": "🤖",
+      "variant": "pink",
+      "category": "Robotics",
+      "period": "October 2016 – November 2016"
     }
   ],
   "experience": {
