@@ -23,6 +23,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <h3 id={titleId} className="project-card__title">
         {project.title}
       </h3>
+      {project.period && (
+        <p className="project-card__period">{project.period}</p>
+      )}
       <p id={descriptionId} className="project-card__description">
         {project.description}
       </p>

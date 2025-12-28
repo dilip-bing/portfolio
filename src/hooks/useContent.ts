@@ -12,6 +12,9 @@ import {
   ContactLink,
   ContactType,
 } from "../types/types";
+import {
+  SkillGroup,
+} from "../types/types";
 
 function isMenuItem(value: unknown): value is MenuItem {
   return (
@@ -19,6 +22,14 @@ function isMenuItem(value: unknown): value is MenuItem {
     value !== null &&
     typeof (value as MenuItem).label === "string" &&
     typeof (value as MenuItem).href === "string"
+  );
+}
+function isSkillGroup(value: unknown): value is SkillGroup {
+  if (typeof value !== "object" || value === null) return false;
+  const sg = value as SkillGroup;
+  return (
+    typeof sg.name === "string" &&
+    Array.isArray(sg.skills) && sg.skills.every((s) => typeof s === "string")
   );
 }
 
@@ -45,6 +56,7 @@ function isHero(value: unknown): value is HeroContent {
   const h = value as HeroContent;
   return (
     typeof h.avatarEmoji === "string" &&
+    (h.avatarImage === undefined || typeof h.avatarImage === "string") &&
     typeof h.titlePrefix === "string" &&
     typeof h.name === "string" &&
     typeof h.titleSuffix === "string" &&
@@ -126,7 +138,7 @@ function isSiteContent(value: unknown): value is SiteContent {
     Array.isArray(s.nav) && s.nav.every(isMenuItem) &&
     isHero(s.hero) &&
     isLocation(s.location) &&
-    Array.isArray(s.skills) && s.skills.every((t) => typeof t === "string") &&
+    Array.isArray(s.skillGroups) && s.skillGroups.every(isSkillGroup) &&
     isEducation(s.education) &&
     Array.isArray(s.projects) && s.projects.every(isProject) &&
     isExperience(s.experience) &&

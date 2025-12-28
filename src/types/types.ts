@@ -16,6 +16,7 @@ export interface Project {
   variant: ProjectVariant;
   category?: string;
   href?: string;
+  period?: string;
 }
 
 export interface Experience {
@@ -49,6 +50,7 @@ export interface ContactLink {
 
 export interface HeroContent {
   avatarEmoji: string;
+  avatarImage?: string;
   titlePrefix: string;
   name: string;
   titleSuffix: string;
@@ -64,12 +66,17 @@ export interface LocationInfo {
   zoom?: number;
 }
 
+export interface SkillGroup {
+  name: string;
+  skills: string[];
+}
+
 export interface SiteContent {
   metaTitle: string;
   nav: MenuItem[];
   hero: HeroContent;
   location: LocationInfo;
-  skills: string[];
+  skillGroups: SkillGroup[];
   education: Education;
   projects: Project[];
   experience: Experience;

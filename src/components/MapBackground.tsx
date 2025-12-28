@@ -29,15 +29,17 @@ export function MapBackground({ lat, lng, zoom = 11 }: MapBackgroundProps) {
         maxZoom: 19,
       }).addTo(mapRef.current);
 
-      // Custom emoji marker
-      const emojiIcon = L.divIcon({
-        className: "custom-emoji-marker",
-        html: '<span style="font-size: 32px;">📍</span>',
-        iconSize: [32, 32],
-        iconAnchor: [16, 32],
+      // Custom marker with location pin image
+      const baseUrl = (import.meta as any).env.BASE_URL ?? "/";
+      const imageIcon = L.icon({
+        iconUrl: `${baseUrl}marker.png`,
+        iconSize: [120, 120],
+        iconAnchor: [60, 100],
+        popupAnchor: [0, -100],
+        className: "custom-image-marker",
       });
 
-      L.marker([lat, lng], { icon: emojiIcon }).addTo(mapRef.current);
+      L.marker([lat, lng], { icon: imageIcon }).addTo(mapRef.current);
 
       // Force map to recalculate size after render
       setTimeout(() => {

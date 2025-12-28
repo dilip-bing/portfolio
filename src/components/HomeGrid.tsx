@@ -31,7 +31,7 @@ export function HomeGrid() {
 
       {/* Skills (span 3) */}
       <div className="grid-span-3">
-        <SkillsCard skills={content.skills} />
+        <SkillsCard skillGroups={content.skillGroups} />
       </div>
 
       {/* Row 2: Background - Education & Experience */}

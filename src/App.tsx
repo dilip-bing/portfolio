@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div className="container">
       <header className="site-header">
-        <div className="logo" aria-label="Site logo">dilip</div>
+        <div className="logo" aria-label="Site logo">The Context</div>
         <nav className="site-nav" aria-label="Primary">
           {content?.nav?.map((item) => (
             <a key={item.href} href={item.href} aria-label={item.label}>
